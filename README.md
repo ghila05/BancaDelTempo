@@ -1,1 +1,2 @@
 # BancaDelTempo
+# Autore: Ghilardi Nicola
