@@ -14,7 +14,7 @@ namespace BancaDelTempo
         public string Zona { get; set; }
         public string Id { get; private set;}
 
-        private Utente u = new Utente();
+
         public Banca() { 
         
         }
