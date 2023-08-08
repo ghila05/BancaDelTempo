@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BancaDelTempo
 {
@@ -16,18 +17,23 @@ namespace BancaDelTempo
         public string Cognome { get; set; }
         public string Tel { get; set; }
         public float Debiti { get; set; }
+
+        public Utente(string nome, string cognome, string tel, float debiti) {
+            
+            id = CreaId(nome, cognome, tel);
+
+            this.nome = nome;
+            this.cognome = cognome;
+            this.tel = tel;
+            this.debiti = debiti;
+        }
+
         public Utente()
         {
 
         }
-        public Utente(string nome, string cognome, string tel) { 
-            id = CreaId(nome, cognome, tel);
-            this.nome = nome;
-            this.cognome = cognome;
-            this.tel = tel;
-        }
-
-        public string CreaId(string nome, string cognome, string tel) {
+        private string CreaId(string nome, string cognome, string tel) {
+            MessageBox.Show("sono dentro alla funzione");
             string id;
             id = nome.Substring(0,4);
             id = id + cognome.Substring(0, 3);

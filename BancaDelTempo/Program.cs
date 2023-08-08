@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace BancaDelTempo
 {
-    internal static class Program
+    public  static class Program
     {
 
         [STAThread]
@@ -19,12 +19,14 @@ namespace BancaDelTempo
 
 
 
-
+            
 
 
 
 
 
         }
+
+
     }
 }

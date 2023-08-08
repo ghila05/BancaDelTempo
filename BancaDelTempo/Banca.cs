@@ -14,7 +14,8 @@ namespace BancaDelTempo
         public string Zona { get; set; }
         public string Id { get; private set;}
 
-
+        List<Utente>utenti = new List<Utente>();
+        
         public Banca() { 
         
         }
@@ -36,6 +37,10 @@ namespace BancaDelTempo
             return (this.id == b.id);
         }
 
+        public void AddUser(Utente u)
+        {
+            utenti.Add(u);
+        }
 
 
     }
