@@ -12,9 +12,9 @@ using System.IO;
 
 namespace BancaDelTempo
 {
-    public partial class Form1 : Form
+    public partial class GhilaBDT : Form
     {
-        public Form1()
+        public GhilaBDT()
         {
             InitializeComponent();
         }
@@ -26,7 +26,8 @@ namespace BancaDelTempo
         {
             bdt = new Banca("123", "GhilaBank", "BG");
             user = LoadUser();
-            MessageBox.Show(user[1].Id);
+
+
             for(int i=0; i<user.Count; i++)
             {
                 bdt.AddUser(user[i]);   // aggiungo alla banca tutti gli utenti prova
@@ -39,9 +40,9 @@ namespace BancaDelTempo
                 first = false;
 
                 listView1.Columns.Add("ID", 60);
-                listView1.Columns.Add("NOME", 90);
+                listView1.Columns.Add("NOME", 100);
                 listView1.Columns.Add("COGNOME", 100);
-                listView1.Columns.Add("TEL.", 150);
+                listView1.Columns.Add("TEL.", 180);
                 listView1.Columns.Add("DEBITI IN H", 100);
 
             }
@@ -69,10 +70,24 @@ namespace BancaDelTempo
             return userList;
         }
 
+       
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
+        private void OrdinaDebiti_Click(object sender, EventArgs e)
+        {
+       
+
+
+
+        }
+
+        private void AggUser_Click(object sender, EventArgs e)
+        {
+            AddUser user = new AddUser();
+            user.ShowDialog();
+        }
     }
 }

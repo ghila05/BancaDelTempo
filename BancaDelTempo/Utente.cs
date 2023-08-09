@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace BancaDelTempo
 {
-    public class Utente : IEquatable<Utente>
+    public class Utente : IEquatable<Utente>, IComparable<Utente>
     {
         string id, nome, cognome, tel;
         float debiti = 0;
@@ -53,6 +53,16 @@ namespace BancaDelTempo
             if (this == p) return true;
             return (this.id == p.id);
         }
+
+        public int CompareTo(Utente utente)
+        {
+            if (utente.debiti < this.debiti) return -1; 
+
+            if (utente.debiti > this.debiti) return 1;
+
+            return 0;
+        }
+        
 
     }
 }
