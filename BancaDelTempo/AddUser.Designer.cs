@@ -34,6 +34,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -86,7 +87,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(38, 184);
+            this.checkBox1.Location = new System.Drawing.Point(38, 237);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(238, 20);
             this.checkBox1.TabIndex = 7;
@@ -99,7 +100,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.button1.Location = new System.Drawing.Point(38, 210);
+            this.button1.Location = new System.Drawing.Point(38, 263);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(342, 41);
             this.button1.TabIndex = 8;
@@ -107,12 +108,32 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Lavori manuali",
+            "Cucina",
+            "Bambini",
+            "Trasporto",
+            "Sport",
+            "Tecnologie"});
+            this.comboBox1.Location = new System.Drawing.Point(38, 188);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(347, 24);
+            this.comboBox1.TabIndex = 9;
+            this.comboBox1.Text = "Categoria";
+            this.comboBox1.Enter += new System.EventHandler(this.comboBox1_Enter);
+            this.comboBox1.Leave += new System.EventHandler(this.comboBox1_Leave);
+            // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(425, 263);
+            this.ClientSize = new System.Drawing.Size(425, 316);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox3);
@@ -134,5 +155,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

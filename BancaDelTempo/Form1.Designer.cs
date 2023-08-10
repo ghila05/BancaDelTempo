@@ -52,7 +52,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(228, 78);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(723, 352);
+            this.listView1.Size = new System.Drawing.Size(915, 352);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -115,7 +115,7 @@
             this.OrdinaDebiti.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.OrdinaDebiti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OrdinaDebiti.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.OrdinaDebiti.Location = new System.Drawing.Point(732, 37);
+            this.OrdinaDebiti.Location = new System.Drawing.Point(924, 37);
             this.OrdinaDebiti.Name = "OrdinaDebiti";
             this.OrdinaDebiti.Size = new System.Drawing.Size(219, 35);
             this.OrdinaDebiti.TabIndex = 2;
@@ -128,9 +128,9 @@
             this.AggUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AggUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AggUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AggUser.Location = new System.Drawing.Point(0, 221);
+            this.AggUser.Location = new System.Drawing.Point(14, 221);
             this.AggUser.Name = "AggUser";
-            this.AggUser.Size = new System.Drawing.Size(185, 30);
+            this.AggUser.Size = new System.Drawing.Size(189, 30);
             this.AggUser.TabIndex = 3;
             this.AggUser.Text = "Aggiungi user";
             this.AggUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -142,9 +142,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(0, 257);
+            this.button2.Location = new System.Drawing.Point(14, 257);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(185, 30);
+            this.button2.Size = new System.Drawing.Size(189, 30);
             this.button2.TabIndex = 4;
             this.button2.Text = "Scambia ore";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -155,7 +155,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(963, 441);
+            this.ClientSize = new System.Drawing.Size(1155, 441);
             this.Controls.Add(this.OrdinaDebiti);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listView1);

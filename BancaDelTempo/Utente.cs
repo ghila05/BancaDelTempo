@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,30 +10,32 @@ namespace BancaDelTempo
 {
     public class Utente : IEquatable<Utente>, IComparable<Utente>
     {
-        string id, nome, cognome, tel;
+        string id, nome, cognome, tel, categoria;
         float debiti = 0;
 
         public string Id { get; private set; }
-        public string Nome { get; set; }
-        public string Cognome { get; set; }
-        public string Tel { get; set; }
-        public float Debiti { get; set; }
+        public string Nome { get;  set; }
+        public string Cognome { get;  set; }
+        public string Tel { get;  set; }
+        public float Debiti { get;  set; }
+        public string Categoria { get;  set; } 
 
-        public Utente(string nome, string cognome, string tel, float debiti) {
-            
-            id = CreaId(nome, cognome, tel);
+        public Utente(string nome, string cognome, string tel, string categoria) {
 
-            this.nome = nome;
-            this.cognome = cognome;
-            this.tel = tel;
-            this.debiti = debiti;
+            Nome = nome;
+            Cognome = cognome;
+            Tel = tel;
+            Categoria = categoria;
+            Debiti = 0;
         }
 
         public Utente()
         {
 
         }
+  
         private string CreaId(string nome, string cognome, string tel) {
+
             MessageBox.Show("sono dentro alla funzione");
             string id;
             id = nome.Substring(0,4);
@@ -41,7 +44,7 @@ namespace BancaDelTempo
             return id;
         
         }
-
+    
         public override string ToString()
         {
             return id + ";" + nome + ";" + cognome + ";" + tel + ";" + debiti;

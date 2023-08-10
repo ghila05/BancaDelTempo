@@ -20,9 +20,9 @@ namespace BancaDelTempo
         
         }
 
-        public Banca(string id, string nome, string zona) { 
-            this.id = id;
-            this.nome = nome;
+        public Banca(string id, string nome, string zona) {
+            id = Id;
+            nome = Nome;
             this.zona = zona;
         }
 

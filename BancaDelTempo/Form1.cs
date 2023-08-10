@@ -43,7 +43,8 @@ namespace BancaDelTempo
                 listView1.Columns.Add("NOME", 100);
                 listView1.Columns.Add("COGNOME", 100);
                 listView1.Columns.Add("TEL.", 180);
-                listView1.Columns.Add("DEBITI IN H", 100);
+                listView1.Columns.Add("DEBITI IN H", 120);
+                listView1.Columns.Add("CATEGORIA", 150);
 
             }
 
@@ -56,6 +57,7 @@ namespace BancaDelTempo
                 campi.SubItems.Add(user[i].Cognome);
                 campi.SubItems.Add(user[i].Tel);
                 campi.SubItems.Add(Convert.ToString(user[i].Debiti));
+                campi.SubItems.Add(user[i].Categoria);
                 listView1.Items.Add(campi);
                 campi.BackColor = Color.LimeGreen;
             }
