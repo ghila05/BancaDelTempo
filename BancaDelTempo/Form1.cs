@@ -20,7 +20,7 @@ namespace BancaDelTempo
         }
         Banca bdt;
         List<Utente> user; //lista di utenti della banca
-        string path = @"C:\Users\nicol\OneDrive\Desktop\prova.json";
+        string path = @"C:\Users\nicol\OneDrive\Desktop\prova.json";// va cambiato in percorso relativo
         bool first = true;
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -48,8 +48,22 @@ namespace BancaDelTempo
 
             }
 
+           
+            fillist();
+
+        }
+
+        private List<Utente> LoadUser()
+        {
+            string jsonContent = File.ReadAllText(path);
+            List<Utente> userList = JsonConvert.DeserializeObject<List<Utente>>(jsonContent);
+
+            return userList;
+        }
+        public void fillist()
+        {
             ListViewItem campi;
-            
+
             for (int i = 0; i < user.Count; i++)
             {
                 campi = new ListViewItem(user[i].Id);
@@ -61,15 +75,6 @@ namespace BancaDelTempo
                 listView1.Items.Add(campi);
                 campi.BackColor = Color.LimeGreen;
             }
-
-        }
-
-        private List<Utente> LoadUser()
-        {
-            string jsonContent = File.ReadAllText(path);
-            List<Utente> userList = JsonConvert.DeserializeObject<List<Utente>>(jsonContent);
-
-            return userList;
         }
 
        
@@ -88,8 +93,11 @@ namespace BancaDelTempo
 
         private void AggUser_Click(object sender, EventArgs e)
         {
-            AddUser user = new AddUser();
-            user.ShowDialog();
+            AddUser userr = new AddUser();
+            userr.ShowDialog();
+            user = LoadUser();
+            listView1.Items.Clear();
+            fillist();
         }
     }
 }
