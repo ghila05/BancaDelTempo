@@ -21,7 +21,7 @@ namespace BancaDelTempo
         public string Categoria { get;  set; } 
 
         public Utente(string nome, string cognome, string tel, string categoria) {
-
+            Id = CreaId(nome,cognome, tel);
             Nome = nome;
             Cognome = cognome;
             Tel = tel;
@@ -31,7 +31,7 @@ namespace BancaDelTempo
 
         public Utente()
         {
-
+            MessageBox.Show("mother father");
         }
   
         private string CreaId(string nome, string cognome, string tel) {

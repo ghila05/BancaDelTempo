@@ -149,6 +149,7 @@
             this.button2.Text = "Scambia ore";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // GhilaBDT
             // 

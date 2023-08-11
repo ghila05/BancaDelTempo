@@ -124,6 +124,7 @@
             this.comboBox1.Size = new System.Drawing.Size(347, 24);
             this.comboBox1.TabIndex = 9;
             this.comboBox1.Text = "Categoria";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.Enter += new System.EventHandler(this.comboBox1_Enter);
             this.comboBox1.Leave += new System.EventHandler(this.comboBox1_Leave);
             // 

@@ -98,6 +98,8 @@ namespace BancaDelTempo
                 comboBox1.ForeColor = Color.Gray;
             }
         }
+        
+         //end of the design part
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -127,7 +129,9 @@ namespace BancaDelTempo
 
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

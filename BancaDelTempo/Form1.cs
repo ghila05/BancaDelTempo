@@ -26,7 +26,7 @@ namespace BancaDelTempo
         {
             bdt = new Banca("123", "GhilaBank", "BG");
             user = LoadUser();
-
+            MessageBox.Show(user[1].Id);
 
             for(int i=0; i<user.Count; i++)
             {
@@ -66,6 +66,7 @@ namespace BancaDelTempo
 
             for (int i = 0; i < user.Count; i++)
             {
+             
                 campi = new ListViewItem(user[i].Id);
                 campi.SubItems.Add(user[i].Nome);
                 campi.SubItems.Add(user[i].Cognome);
