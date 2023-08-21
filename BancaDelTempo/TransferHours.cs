@@ -72,5 +72,7 @@ namespace BancaDelTempo
                 textBox3.ForeColor = Color.Gray;
             }
         }
+
+        //end of the design part
     }
 }

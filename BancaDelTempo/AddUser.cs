@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace BancaDelTempo
 {
@@ -20,7 +21,8 @@ namespace BancaDelTempo
         }
 
         string path = @"C:\Users\nicol\OneDrive\Desktop\prova.json";
-
+        string phone;
+        string regexPattern = @"^(?:\+39|0039)?[ ]?[0-9]{2,4}[ ]?[0-9]{5,10}$";  // regular expression that control phone number 
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -108,12 +110,29 @@ namespace BancaDelTempo
             if (textBox3.Text == "Numero telefonico") { throw new Exception("Inserisci il tuo Numero telefonico"); } //check 
             if (checkBox1.Checked == false) { throw new Exception("Accetta le informative sulla privacy"); }
 
+            if (Regex.IsMatch(textBox3.Text, regexPattern) == false)
+            {
+                throw new Exception("Numero di telefono non valido");
+            }
+
+
             //Utente u = new Utente {Nome = textBox1.Text, Cognome = textBox2.Text, Tel = textBox3.Text}; 
-            Utente u = new Utente(textBox1.Text,textBox2.Text,textBox3.Text, comboBox1.Text);
+
+
+            Utente u = new Utente(CreateId(textBox1.Text.ToUpper(),textBox2.Text.ToUpper(), textBox3.Text.ToUpper()), textBox1.Text.ToUpper(),textBox2.Text.ToUpper(),textBox3.Text.ToUpper(), comboBox1.Text.ToUpper());
 
             MessageBox.Show($"nome: {u.Nome}");
             WriteUser(u);
 
+        }
+
+        private string CreateId(string nome, string cognome, string tel) // create unique id with name, surname and phone number
+        {
+            string id;
+            id = nome.Substring(0, 1);
+            id = id + cognome.Substring(0, 1);
+            id = id + tel.Substring(6, 2);
+            return id;
         }
 
         private void WriteUser(Utente u) 
@@ -121,11 +140,11 @@ namespace BancaDelTempo
             string jsonContent = File.ReadAllText(path);
             List<Utente> userList = JsonConvert.DeserializeObject<List<Utente>>(jsonContent); // read and deserialize
 
-            userList.Add(u); //add new user 
+            userList.Add(u); //add new user to the list 
 
             string serialize  = JsonConvert.SerializeObject(userList, Formatting.Indented); // deserialize and write
-            File.WriteAllText(path, serialize);
-            
+            File.WriteAllText(path, serialize); //add new user to the file
+
 
         }
 

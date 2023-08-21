@@ -26,7 +26,7 @@ namespace BancaDelTempo
         {
             bdt = new Banca("123", "GhilaBank", "BG");
             user = LoadUser();
-            MessageBox.Show(user[1].Id);
+    
 
             for(int i=0; i<user.Count; i++)
             {
@@ -92,13 +92,23 @@ namespace BancaDelTempo
 
         }
 
-        private void AggUser_Click(object sender, EventArgs e)
+        private void AggUser_Click(object sender, EventArgs e) // aggiungi utente
         {
             AddUser userr = new AddUser();
             userr.ShowDialog();
             user = LoadUser();
             listView1.Items.Clear();
             fillist();
+        }
+
+        private void button2_Click(object sender, EventArgs e) // scambia ore
+        {
+            TransferHours scambia = new TransferHours();
+            scambia.ShowDialog();
+            user = LoadUser();
+            listView1.Items.Clear();
+            fillist();
+
         }
     }
 }
