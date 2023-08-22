@@ -110,5 +110,31 @@ namespace BancaDelTempo
             fillist();
 
         }
+
+        private void button1_Click(object sender, EventArgs e) // delete selected user
+        {
+            string selected = listView1.SelectedItems[0].SubItems[0].Text; // id of selected user
+
+            string jsonContent = File.ReadAllText(path);
+            List<Utente> userList = JsonConvert.DeserializeObject<List<Utente>>(jsonContent); // read and deserialize
+
+            for(int i = 0; i < userList.Count; i++)
+            {
+                if (userList[i].Id == selected)
+                {
+                    userList.RemoveAt(i);
+                }
+
+            }
+
+
+            string serialize = JsonConvert.SerializeObject(userList, Formatting.Indented); // deserialize and write
+            File.WriteAllText(path, serialize); //write the file with new info
+
+
+            user = LoadUser();
+            listView1.Items.Clear();
+            fillist();
+        }
     }
 }

@@ -132,6 +132,7 @@ namespace BancaDelTempo
 
             string serialize = JsonConvert.SerializeObject(userList, Formatting.Indented); // deserialize and write
             File.WriteAllText(path, serialize); //write the file with new info
+            MessageBox.Show("PAGAMENTO EFFETTUATO CON SUCCESSO");
 
         }
     }
