@@ -43,7 +43,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(251, 35);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Mittente";
+            this.textBox1.Text = "Id Mittente";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
@@ -65,7 +65,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(251, 35);
             this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "Destinatario";
+            this.textBox2.Text = "Id Destinatario";
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
@@ -77,7 +77,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(251, 35);
             this.textBox3.TabIndex = 3;
-            this.textBox3.Text = "Importo in €";
+            this.textBox3.Text = "Importo in h";
             this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
             this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             // 
@@ -90,6 +90,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Paga";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TransferHours
             // 

@@ -19,8 +19,8 @@ namespace BancaDelTempo
             InitializeComponent();
         }
         Banca bdt;
-        List<Utente> user; //lista di utenti della banca
-        string path = @"C:\Users\nicol\OneDrive\Desktop\prova.json";// va cambiato in percorso relativo
+        List<Utente> user; //list of user
+        string path = @"prova.json";
         bool first = true;
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -33,7 +33,7 @@ namespace BancaDelTempo
                 bdt.AddUser(user[i]);   // aggiungo alla banca tutti gli utenti prova
             }
 
-            if (first)//solo la prima volta che apro il programma popolo la listview
+            if (first)//only the first time 
             {
                 listView1.View = View.Details;
                 listView1.FullRowSelect = true;
@@ -92,7 +92,7 @@ namespace BancaDelTempo
 
         }
 
-        private void AggUser_Click(object sender, EventArgs e) // aggiungi utente
+        private void AggUser_Click(object sender, EventArgs e) // add user
         {
             AddUser userr = new AddUser();
             userr.ShowDialog();
@@ -101,7 +101,7 @@ namespace BancaDelTempo
             fillist();
         }
 
-        private void button2_Click(object sender, EventArgs e) // scambia ore
+        private void button2_Click(object sender, EventArgs e) // transfer hours
         {
             TransferHours scambia = new TransferHours();
             scambia.ShowDialog();

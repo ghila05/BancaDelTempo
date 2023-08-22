@@ -20,8 +20,7 @@ namespace BancaDelTempo
             InitializeComponent();
         }
 
-        string path = @"C:\Users\nicol\OneDrive\Desktop\prova.json";
-        string phone;
+        string path = @"prova.json";
         string regexPattern = @"^(?:\+39|0039)?[ ]?[0-9]{2,4}[ ]?[0-9]{5,10}$";  // regular expression that control phone number 
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -109,19 +108,12 @@ namespace BancaDelTempo
             if (textBox2.Text == "Cognome") { throw new Exception("Inserisci il tuo Cognome"); }
             if (textBox3.Text == "Numero telefonico") { throw new Exception("Inserisci il tuo Numero telefonico"); } //check 
             if (checkBox1.Checked == false) { throw new Exception("Accetta le informative sulla privacy"); }
-
             if (Regex.IsMatch(textBox3.Text, regexPattern) == false)
             {
                 throw new Exception("Numero di telefono non valido");
             }
-
-
-            //Utente u = new Utente {Nome = textBox1.Text, Cognome = textBox2.Text, Tel = textBox3.Text}; 
-
-
             Utente u = new Utente(CreateId(textBox1.Text.ToUpper(),textBox2.Text.ToUpper(), textBox3.Text.ToUpper()), textBox1.Text.ToUpper(),textBox2.Text.ToUpper(),textBox3.Text.ToUpper(), comboBox1.Text.ToUpper());
 
-            MessageBox.Show($"nome: {u.Nome}");
             WriteUser(u);
 
         }
