@@ -20,7 +20,7 @@ namespace BancaDelTempo
         }
         Banca bdt;
         List<Utente> user; //list of user
-        string path = @"prova.json";
+        string path = @"user.json";
         bool first = true;
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -126,8 +126,6 @@ namespace BancaDelTempo
                 }
 
             }
-
-
             string serialize = JsonConvert.SerializeObject(userList, Formatting.Indented); // deserialize and write
             File.WriteAllText(path, serialize); //write the file with new info
 
@@ -135,6 +133,15 @@ namespace BancaDelTempo
             user = LoadUser();
             listView1.Items.Clear();
             fillist();
+        }
+
+        private void button3_Click(object sender, EventArgs e)// offer, request specific performance
+        {
+            SpecificPerformance performance = new SpecificPerformance();
+            performance.ShowDialog();
+
+
+
         }
     }
 }

@@ -64,6 +64,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecificPerformance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecificPerformance.Designer.cs">
+      <DependentUpon>SpecificPerformance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task.cs" />
     <Compile Include="TransferHours.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +93,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SpecificPerformance.resx">
+      <DependentUpon>SpecificPerformance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TransferHours.resx">
       <DependentUpon>TransferHours.cs</DependentUpon>
     </EmbeddedResource>

@@ -20,7 +20,7 @@ namespace BancaDelTempo
             InitializeComponent();
         }
 
-        string path = @"prova.json";
+        string path = @"user.json";
         string regexPattern = @"^(?:\+39|0039)?[ ]?[0-9]{2,4}[ ]?[0-9]{5,10}$";  // regular expression that control phone number 
 
         private void textBox1_TextChanged(object sender, EventArgs e)

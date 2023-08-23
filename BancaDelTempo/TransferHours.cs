@@ -20,7 +20,7 @@ namespace BancaDelTempo
         {
             InitializeComponent();
         }
-        string path = @"prova.json";
+        string path = @"user.json";
         string regexPattern = @"^[A-Z]{2}\d{2}$";
         private void textBox1_Enter(object sender, EventArgs e)
         {
