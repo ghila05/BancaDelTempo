@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.OrdinaDebiti = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,15 +53,16 @@
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(228, 78);
+            this.listView1.Location = new System.Drawing.Point(228, 53);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(934, 352);
+            this.listView1.Size = new System.Drawing.Size(938, 411);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
@@ -161,7 +163,7 @@
             this.OrdinaDebiti.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.OrdinaDebiti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OrdinaDebiti.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.OrdinaDebiti.Location = new System.Drawing.Point(943, 37);
+            this.OrdinaDebiti.Location = new System.Drawing.Point(947, 12);
             this.OrdinaDebiti.Name = "OrdinaDebiti";
             this.OrdinaDebiti.Size = new System.Drawing.Size(219, 35);
             this.OrdinaDebiti.TabIndex = 2;
@@ -183,12 +185,26 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(14, 365);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(189, 30);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Task List";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // GhilaBDT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1174, 441);
+            this.ClientSize = new System.Drawing.Size(1178, 476);
             this.Controls.Add(this.OrdinaDebiti);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listView1);
@@ -217,6 +233,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 

@@ -71,6 +71,12 @@
       <DependentUpon>SpecificPerformance.cs</DependentUpon>
     </Compile>
     <Compile Include="Task.cs" />
+    <Compile Include="TaskList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskList.Designer.cs">
+      <DependentUpon>TaskList.cs</DependentUpon>
+    </Compile>
     <Compile Include="TransferHours.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </Compile>
     <EmbeddedResource Include="SpecificPerformance.resx">
       <DependentUpon>SpecificPerformance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskList.resx">
+      <DependentUpon>TaskList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransferHours.resx">
       <DependentUpon>TransferHours.cs</DependentUpon>

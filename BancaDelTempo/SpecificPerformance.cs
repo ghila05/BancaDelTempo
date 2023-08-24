@@ -75,7 +75,7 @@ namespace BancaDelTempo
                 throw new Exception("Id user non valido");
             }
 
-            t = new Task(textBox2.Text.ToUpper(), textBox1.Text.ToUpper());
+            t = new Task(true, textBox2.Text.ToUpper(), textBox1.Text.ToUpper());
             if (Esiste(t.Id))
             {
                 WriteTask(t);

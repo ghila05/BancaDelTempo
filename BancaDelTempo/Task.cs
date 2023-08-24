@@ -10,14 +10,15 @@ namespace BancaDelTempo
     {
         string id, prestazione;
 
-
+        public bool Todo { get; set; }
         public string Id { get; set; }
         public string Prestazione { get; set; }
 
         public Task() { }
 
-        public Task(string id, string prestazione)
+        public Task(bool todo, string id, string prestazione)
         {
+            Todo = todo;
             Id = id;
             Prestazione = prestazione;  
         }
