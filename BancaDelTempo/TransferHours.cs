@@ -21,7 +21,7 @@ namespace BancaDelTempo
             InitializeComponent();
         }
         string path = @"user.json";
-        string regexPattern = @"^[A-Z]{2}\d{2}$";
+        string regexPattern = @"^[A-Za-z]{2}\d{2}$";
         private void textBox1_Enter(object sender, EventArgs e)
         {
             if (textBox1.Text == "Id Mittente")

@@ -104,6 +104,7 @@ namespace BancaDelTempo
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             if (textBox1.Text == "Nome") { throw new Exception("Inserisci il tuo Nome"); }
             if (textBox2.Text == "Cognome") { throw new Exception("Inserisci il tuo Cognome"); }
             if (textBox3.Text == "Numero telefonico") { throw new Exception("Inserisci il tuo Numero telefonico"); } //check 
@@ -115,6 +116,7 @@ namespace BancaDelTempo
             Utente u = new Utente(CreateId(textBox1.Text.ToUpper(),textBox2.Text.ToUpper(), textBox3.Text.ToUpper()), textBox1.Text.ToUpper(),textBox2.Text.ToUpper(),textBox3.Text.ToUpper(), comboBox1.Text.ToUpper());
 
             WriteUser(u);
+            MessageBox.Show("Utente aggiunto");
 
         }
 
@@ -143,6 +145,11 @@ namespace BancaDelTempo
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddUser_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
