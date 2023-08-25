@@ -141,12 +141,38 @@ namespace BancaDelTempo
 
         }
 
-        private void OrdinaDebiti_Click(object sender, EventArgs e)
+        private void OrdinaDebiti_Click(object sender, EventArgs e) //
         {
-       
+            for (int i = 0; i < listView1.Items.Count; i++)
+            {
+                for (int j = i; j < listView1.Items.Count; j++)
+                {
+                    if ( (double.Parse(listView1.Items[i].SubItems[4].Text) < double.Parse(listView1.Items[j].SubItems[4].Text)))
+                        ScambiaElementi(i, j, listView1);
+
+                }
+            }
 
 
 
+        }
+        public static void ScambiaElementi(int ind1, int ind2, ListView listuccia)
+        {
+            string[] backup = new string[] { " ", " ", " ", " ", " ", " " };//da quel che ho visto non posso scambiare gli item quindi così
+            string[] backup1 = new string[] { " ", " ", " ", " ", " ", " " };
+
+            for (int i = 0; i < listuccia.Items[ind1].SubItems.Count - 1; i++) //parte backup
+                backup[i] = listuccia.Items[ind1].SubItems[i].Text;
+
+            for (int i = 0; i < listuccia.Items[ind2].SubItems.Count - 1; i++)
+                backup1[i] = listuccia.Items[ind2].SubItems[i].Text;
+
+
+            for (int i = 0; i < listuccia.Items[ind2].SubItems.Count - 1; i++) //parte in cui scambio
+                listuccia.Items[ind2].SubItems[i].Text = backup[i];
+
+            for (int i = 0; i < listuccia.Items[ind1].SubItems.Count - 1; i++)
+                listuccia.Items[ind1].SubItems[i].Text = backup1[i];
         }
 
 

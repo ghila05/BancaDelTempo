@@ -149,7 +149,7 @@ namespace BancaDelTempo
 
         private void AddUser_Load(object sender, EventArgs e)
         {
-            
+            label1.Focus();
         }
     }
 }
