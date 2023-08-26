@@ -30,7 +30,7 @@ namespace BancaDelTempo
 
             for(int i=0; i<user.Count; i++)
             {
-                bdt.AddUser(user[i]);   // aggiungo alla banca tutti gli utenti prova
+                bdt.AddUser(user[i]);   // add all users to the bank
             }
 
             if (first)//only the first time 
@@ -141,7 +141,7 @@ namespace BancaDelTempo
 
         }
 
-        private void OrdinaDebiti_Click(object sender, EventArgs e) //
+        private void OrdinaDebiti_Click(object sender, EventArgs e) // reorder
         {
             for (int i = 0; i < listView1.Items.Count; i++)
             {
@@ -158,17 +158,17 @@ namespace BancaDelTempo
         }
         public static void ScambiaElementi(int ind1, int ind2, ListView listuccia)
         {
-            string[] backup = new string[] { " ", " ", " ", " ", " ", " " };//da quel che ho visto non posso scambiare gli item quindi così
+            string[] backup = new string[] { " ", " ", " ", " ", " ", " " };
             string[] backup1 = new string[] { " ", " ", " ", " ", " ", " " };
 
-            for (int i = 0; i < listuccia.Items[ind1].SubItems.Count - 1; i++) //parte backup
+            for (int i = 0; i < listuccia.Items[ind1].SubItems.Count - 1; i++) // backup
                 backup[i] = listuccia.Items[ind1].SubItems[i].Text;
 
             for (int i = 0; i < listuccia.Items[ind2].SubItems.Count - 1; i++)
                 backup1[i] = listuccia.Items[ind2].SubItems[i].Text;
 
 
-            for (int i = 0; i < listuccia.Items[ind2].SubItems.Count - 1; i++) //parte in cui scambio
+            for (int i = 0; i < listuccia.Items[ind2].SubItems.Count - 1; i++) // change element
                 listuccia.Items[ind2].SubItems[i].Text = backup[i];
 
             for (int i = 0; i < listuccia.Items[ind1].SubItems.Count - 1; i++)

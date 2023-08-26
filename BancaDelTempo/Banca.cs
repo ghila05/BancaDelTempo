@@ -37,6 +37,8 @@ namespace BancaDelTempo
             return (this.id == b.id);
         }
 
+
+
         public void AddUser(Utente u)
         {
             utenti.Add(u);

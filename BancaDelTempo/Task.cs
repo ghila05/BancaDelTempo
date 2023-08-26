@@ -9,6 +9,7 @@ namespace BancaDelTempo
     public class Task : IEquatable<Task>
     {
         string id, prestazione;
+        bool todo;
 
         public bool Todo { get; set; }
         public string Id { get; set; }
