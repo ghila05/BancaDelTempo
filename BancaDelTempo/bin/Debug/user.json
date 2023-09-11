@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "MR75",
+    "Nome": "MARIO",
+    "Cognome": "ROSSI",
+    "Tel": "3923147578",
+    "Debiti": 2.0,
+    "Categoria": "LAVORI MANUALI"
+  },
+  {
+    "Id": "MG56",
+    "Nome": "MARCO",
+    "Cognome": "GRASSI",
+    "Tel": "3250011562",
+    "Debiti": 3.0,
+    "Categoria": "CUCINA"
+  },
+  {
+    "Id": "SD23",
+    "Nome": "SARA",
+    "Cognome": "DISTURCO",
+    "Tel": "1235512354",
+    "Debiti": -2.0,
+    "Categoria": "BAMBINI"
+  },
+  {
+    "Id": "JD43",
+    "Nome": "JHON",
+    "Cognome": "DOE",
+    "Tel": "987654321",
+    "Debiti": 4.0,
+    "Categoria": "TRASPORTO"
+  },
+  {
+    "Id": "MB75",
+    "Nome": "MARIO",
+    "Cognome": "BELLO",
+    "Tel": "3923547578",
+    "Debiti": 1.0,
+    "Categoria": "TRASPORTO"
+  },
+  {
+    "Id": "RB25",
+    "Nome": "RICCARDO",
+    "Cognome": "BELGRANO",
+    "Tel": "+395632547578",
+    "Debiti": 2.0,
+    "Categoria": "LAVORI MANUALI"
+  }
+]
